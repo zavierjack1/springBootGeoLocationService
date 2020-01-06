@@ -5,8 +5,10 @@ spring:
       auto-offset-reset: earliest
     # change this property if you are using your own
     # Kafka cluster or your Docker IP is different
-    bootstrap-servers: localhost:9092
+    #bootstrap-servers: "10.0.0.86:32769"
+    zookeeper: "localhost:2181"
 
 tpd:
-  topic-name: advice-topic
+  topic-name-coordinates: coordinates
+  topic-name-advice: advice
   messages-per-request: 10
